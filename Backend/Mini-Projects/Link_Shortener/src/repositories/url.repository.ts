@@ -26,3 +26,7 @@ export const incrementUrlClicksCount = async (shortCode: string)=>{
         {new: true}
     )
 };
+
+export const deleteUelByShortCode = async (shortCode: string)=>{
+    return await Url.findOneAndDelete({shortCode});
+}
